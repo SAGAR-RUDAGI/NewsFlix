@@ -5,7 +5,8 @@ class PoliticalRoute extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text("Political News")
+        title: Text("Political News"),
+          backgroundColor: Colors.indigo[700],
       ),
     );
   }

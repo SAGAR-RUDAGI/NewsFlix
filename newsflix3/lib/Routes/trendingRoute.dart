@@ -5,7 +5,8 @@ class TrendingRoute extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text("Trending News")
+        title: Text("Trending News"),
+          backgroundColor: Colors.indigo[700],
       ),
     );
   }

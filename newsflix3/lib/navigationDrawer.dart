@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:newsflix3/Routes/trendingRoute.dart';
-import 'Routes/entertainmentRoute.dart';
-import 'Routes/politicalRoute.dart';
-import 'Routes/gamingRoute.dart';
-import 'Routes/techRoute.dart';
+import 'package:newsflix3/views/categoryNews.dart';
+import 'package:newsflix3/views/home.dart';
+
 
 class NavigationDrawer extends StatelessWidget {
   @override
@@ -27,30 +25,43 @@ Widget menuList(context) {
                     child: Text(
                       "NewsFlix",
                       style: TextStyle(color: Colors.white, fontSize: 30.0),
-                    )
-                  )
+                    ))
               ],
             ),
             decoration: BoxDecoration(
               color: Colors.indigo[700],
-            )
-            ),
-        ListTile(
+            )),
+            ListTile(
           onTap: () {
             Navigator.push(
-              context, 
-              MaterialPageRoute(builder: (context) => TrendingRoute()),
+              context,
+              MaterialPageRoute(builder: (context) => Home()),
             );
           },
           trailing: Icon(Icons.trending_up, color: Colors.white),
-          title: Text("Trending",
+          title: Text("Top Headlines",
               style: TextStyle(color: Colors.white, fontSize: 20)),
         ),
         ListTile(
           onTap: () {
             Navigator.push(
-              context, 
-              MaterialPageRoute(builder: (context) => EntertainmentRoute()),
+              context,
+              MaterialPageRoute(builder: (context) => CategoryNews(
+                category: "business"
+              )),
+            );
+          },
+          trailing: Icon(Icons.business, color: Colors.white),
+          title: Text("Business",
+              style: TextStyle(color: Colors.white, fontSize: 20)),
+        ),
+        ListTile(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CategoryNews(
+                category: "entertainment"
+              )),
             );
           },
           trailing: Icon(Icons.live_tv, color: Colors.white),
@@ -60,34 +71,53 @@ Widget menuList(context) {
         ListTile(
           onTap: () {
             Navigator.push(
-              context, 
-              MaterialPageRoute(builder: (context) => PoliticalRoute()),
+              context,
+              MaterialPageRoute(builder: (context) => CategoryNews(
+                category: "health"
+              )),
             );
           },
-          trailing: Icon(Icons.group, color: Colors.white),
-          title: Text("Political",
+          trailing: Icon(Icons.local_hospital, color: Colors.white),
+          title: Text("Health",
               style: TextStyle(color: Colors.white, fontSize: 20)),
         ),
         ListTile(
           onTap: () {
             Navigator.push(
-              context, 
-              MaterialPageRoute(builder: (context) => TechRoute()),
+              context,
+              MaterialPageRoute(builder: (context) => CategoryNews(
+                category: "science"
+              )),
             );
           },
-          trailing: Icon(Icons.insert_chart, color: Colors.white),
-          title: Text("Tech",
+          trailing: Icon(Icons.all_inclusive, color: Colors.white),
+          title:
+              Text("Science", style: TextStyle(color: Colors.white, fontSize: 20)),
+        ),
+        ListTile(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CategoryNews(
+                category: "sports"
+              )),
+            );
+          },
+          trailing: Icon(Icons.pool, color: Colors.white),
+          title: Text("Sports",
               style: TextStyle(color: Colors.white, fontSize: 20)),
         ),
         ListTile(
           onTap: () {
             Navigator.push(
-              context, 
-              MaterialPageRoute(builder: (context) => GamingRoute()),
+              context,
+              MaterialPageRoute(builder: (context) => CategoryNews(
+                category: "technology"
+              )),
             );
           },
-          trailing: Icon(Icons.laptop, color: Colors.white),
-          title: Text("Gaming",
+          trailing: Icon(Icons.devices, color: Colors.white),
+          title: Text("Technology",
               style: TextStyle(color: Colors.white, fontSize: 20)),
         ),
       ],

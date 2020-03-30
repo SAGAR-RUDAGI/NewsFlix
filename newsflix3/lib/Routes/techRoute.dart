@@ -5,7 +5,8 @@ class TechRoute extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tech News")
+        title: Text("Tech News"),
+          backgroundColor: Colors.indigo[700],
       ),
     );
   }
