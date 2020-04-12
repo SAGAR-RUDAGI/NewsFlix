@@ -102,10 +102,6 @@ class BlogTile extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                   color: Colors.black87,
                 )),
-            // Text(
-            //   desc,
-            //   style: TextStyle(color: Colors.black54),
-            // ),
           ],
         ),
       ),
